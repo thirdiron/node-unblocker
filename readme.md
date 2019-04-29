@@ -73,6 +73,8 @@ Unblocker supports the following configuration options, defaults are shown:
 ```js
 {
     prefix: '/proxy/',  // Path that the proxied URLs begin with. '/' is not recommended due to a few edge cases.
+    domainPrefixing: true, // Allows the technique of putting the proxied domain into the prefix of the proxy's hostname
+    domain: 'https://bzdomainproxee-test.herokuapp.com/', // The hostname of the proxy with which we will use domain prefixing
     host: null, // Host used in redirects (e.g `example.com` or `localhost:8080`). Default behavior is to determine this from the request headers.
     requestMiddleware: [], // Array of functions that perform extra processing on client requests before they are sent to the remote server. API is detailed below.
     responseMiddleware: [], // Array of functions that perform extra processing on remote responses before they are sent back to the client. API is detailed below.
